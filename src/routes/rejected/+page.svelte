@@ -2,7 +2,7 @@
 
 </script>
     <div>
-        <p>Nei nei, kun for vtfk ansatte.</p>    
+        <p><strong>Nei nei, kun for vtfk ansatte.</strong></p>    
     </div>
 <style>
 
