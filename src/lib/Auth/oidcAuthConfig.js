@@ -15,7 +15,7 @@ import {
     PUBLIC_VITE_OIDV_REVOCATION_ENDPOINT,
     PUBLIC_VITE_OIDC_JWKS_URI,
     PUBLIC_VITE_OIDV_USERINFO_ENDPOINT
-} from "$env/static/public";
+} from "$env/dynamic/public";
 
 const config = {
     authority: PUBLIC_VITE_OIDC_AUTHORITY,
