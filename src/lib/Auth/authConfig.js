@@ -3,9 +3,9 @@ import { env } from '$env/dynamic/private'
 // Config object to be passed to MSAL on creation
 const msalConfig = {
     auth: {
-      clientId: env.VITE_CLIENT_ID,
-      authority: env.VITE_CLIENT_ISS,
-      redirectUri: env.VITE_REDIRECT_URI
+      clientId: import.meta.env.VITE_CLIENT_ID,
+      authority: import.meta.env.VITE_CLIENT_ISS,
+      redirectUri: import.meta.env.VITE_REDIRECT_URI
                     
     },
     cache: {

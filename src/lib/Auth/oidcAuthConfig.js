@@ -1,40 +1,21 @@
-import { 
-    PUBLIC_VITE_OIDC_ACR_VALUES, 
-    PUBLIC_VITE_OIDC_APP_SCOPE, 
-    PUBLIC_VITE_OIDC_AUTHORITY, 
-    PUBLIC_VITE_OIDC_CLIENT_ID, 
-    PUBLIC_VITE_OIDC_POST_LOGOUT_REDIRECT_URI, 
-    PUBLIC_VITE_OIDC_REDIRECT_URI, 
-    PUBLIC_VITE_OIDC_RESPONSE_TYPE, 
-    PUBLIC_VITE_OIDC_SILET_REDIRECT_URI,
-    PUBLIC_VITE_OIDC_ISSUER,
-    PUBLIC_VITE_OIDC_AUTHORIZATION_ENDPOINT,
-    PUBLIC_VITE_OIDC_PUSHED_AUTHORIZATION_REQUEST_ENDPOINT,
-    PUBLIC_VITE_OIDC_TOKEN_ENDPOINT,
-    PUBLIC_VITE_OIDC_END_SESSION_ENDPOINT,
-    PUBLIC_VITE_OIDV_REVOCATION_ENDPOINT,
-    PUBLIC_VITE_OIDC_JWKS_URI,
-    PUBLIC_VITE_OIDV_USERINFO_ENDPOINT
-} from "$env/dynamic/public";
-
 const config = {
-    authority: PUBLIC_VITE_OIDC_AUTHORITY,
-    client_id: PUBLIC_VITE_OIDC_CLIENT_ID,
-    redirect_uri: PUBLIC_VITE_OIDC_REDIRECT_URI,
-    acr: PUBLIC_VITE_OIDC_ACR_VALUES,
-    silent_redirect_uri: PUBLIC_VITE_OIDC_SILET_REDIRECT_URI,
-    post_logout_redirect_uri: PUBLIC_VITE_OIDC_POST_LOGOUT_REDIRECT_URI,
-    response_type: PUBLIC_VITE_OIDC_RESPONSE_TYPE,
-    scope: PUBLIC_VITE_OIDC_APP_SCOPE,
+    authority: import.meta.env.VITE_OIDC_AUTHORITY,
+    client_id: import.meta.env.VITE_OIDC_CLIENT_ID,
+    redirect_uri: import.meta.env.VITE_OIDC_REDIRECT_URI,
+    acr: import.meta.env.VITE_OIDC_ACR_VALUES,
+    silent_redirect_uri: import.meta.env.VITE_OIDC_SILET_REDIRECT_URI,
+    post_logout_redirect_uri: import.meta.env.VITE_OIDC_POST_LOGOUT_REDIRECT_URI,
+    response_type: import.meta.env.VITE_OIDC_RESPONSE_TYPE,
+    scope: import.meta.env.VITE_OIDC_APP_SCOPE,
     loadUserInfo: true,
-    issuer: PUBLIC_VITE_OIDC_ISSUER,
-    authorization_endpoint: PUBLIC_VITE_OIDC_AUTHORIZATION_ENDPOINT,
-    pushed_authorization_request_endpoint: PUBLIC_VITE_OIDC_PUSHED_AUTHORIZATION_REQUEST_ENDPOINT,
-    token_endpoint: PUBLIC_VITE_OIDC_TOKEN_ENDPOINT,
-    end_session_endpoint: PUBLIC_VITE_OIDC_END_SESSION_ENDPOINT,
-    revocation_endpoint: PUBLIC_VITE_OIDV_REVOCATION_ENDPOINT,
-    jwks_uri: PUBLIC_VITE_OIDC_JWKS_URI,
-    userinfo_endpoint: PUBLIC_VITE_OIDV_USERINFO_ENDPOINT
+    issuer: import.meta.env.VITE_OIDC_ISSUER,
+    authorization_endpoint: import.meta.env.VITE_OIDC_AUTHORIZATION_ENDPOINT,
+    pushed_authorization_request_endpoint: import.meta.env.VITE_OIDC_PUSHED_AUTHORIZATION_REQUEST_ENDPOINT,
+    token_endpoint: import.meta.env.VITE_OIDC_TOKEN_ENDPOINT,
+    end_session_endpoint: import.meta.env.VITE_OIDC_END_SESSION_ENDPOINT,
+    revocation_endpoint: import.meta.env.VITE_OIDV_REVOCATION_ENDPOINT,
+    jwks_uri: import.meta.env.VITE_OIDC_JWKS_URI,
+    userinfo_endpoint: import.meta.env.VITE_OIDV_USERINFO_ENDPOINT
 }
 
 export default config
