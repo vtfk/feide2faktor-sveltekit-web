@@ -61,9 +61,9 @@
     <main>
         <div class="text">
             <ol>
-                <li>Legg til din feide 2-faktor ved å skanne QR-Koden i din autentiserings applikasjon eller skriv inn hemmeligheten som står under QR-Koden i din autentiserings applikasjon.</li>
+                <li>Legg til din Feide 2-faktor ved å skanne QR-Koden i din autentiserings applikasjon eller skriv inn hemmeligheten som står under QR-Koden i din autentiserings applikasjon.</li>
                 <li>Du vil nå få en ny oppføring blandt dine 2-faktor koder som heter "VTFK: Feide".</li>
-                <li>Skriv den 6-sifrede koden i feltet under som heter "Kode" og trykk på knappen "Valider" for å sjekke at din feide 2-faktor har blitt opprettet riktig.</li>
+                <li>Skriv den 6-sifrede koden i feltet under som heter "Kode" og trykk på knappen "Valider" for å sjekke at din Feide 2-faktor har blitt opprettet riktig.</li>
             </ol>
         </div>
         <br>

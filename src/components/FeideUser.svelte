@@ -4,17 +4,17 @@
     
     export let userId
     export let reloadFromFeideUser = ''
-    
+
     let resFromAddFeid2Kator
     let isLoading
 </script>
 
 <main>
     <div class="text">
-        <p>Du har ikke feide 2-faktor til din feide bruker. ❌</p>
-        <p>Trykk på knappen under for å opprette feide 2-faktor til din feide konto.</p>
+        <p>Du har ikke Feide 2-faktor til din Feide bruker. ❌</p>
+        <p>Trykk på knappen under for å opprette Feide 2-faktor til din Feide konto.</p>
         <br>
-        <p>Når din feide 2-faktor er opprettet vil denne fungere med engang. 😄</p>
+        <p>Når din Feide 2-faktor er opprettet vil denne fungere med engang. 😄</p>
         <br>
     </div>
     <div class="res">
@@ -36,9 +36,9 @@
     <br>
     <div class="btn">
         {#if !isLoading}
-            <AddFeid2kator btnText={"Opprett feide 2-faktor"} userId={userId} bind:res={resFromAddFeid2Kator} bind:isProcessing={isLoading} bind:reloadFromAdd={reloadFromFeideUser} />
+            <AddFeid2kator btnText={"Opprett Feide 2-faktor"} userId={userId} bind:res={resFromAddFeid2Kator} bind:isProcessing={isLoading} bind:reloadFromAdd={reloadFromFeideUser} />
         {:else}
-            <AddFeid2kator btnText={"Opprett din feide 2-faktor"} disabled={true}/>
+            <AddFeid2kator btnText={"Opprett din Feide 2-faktor"} disabled={true}/>
         {/if}
     </div>
 </main>

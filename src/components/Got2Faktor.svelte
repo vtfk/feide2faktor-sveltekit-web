@@ -11,11 +11,11 @@
 
 <main>
     <div class="text">
-        <p>Du har en fungerende 2-faktor til din feide bruker, som også er registrert riktig i systemet.</p>
+        <p>Du har en fungerende 2-faktor til din Feide bruker, som også er registrert riktig i systemet.</p>
         <br>
-        <p>Har du mistet tilgang til din feide 2-faktor, eller ønsker å resete den kan du trykke på knappen under for å reste din feide 2-faktor.</p>
+        <p>Har du mistet tilgang til din Feide 2-faktor, eller ønsker å tilbakestille den kan du trykke på knappen under for å reste din Feide 2-faktor.</p>
         <br>
-        <p>Når din feide 2-faktor er resatt vil du få muligheten til å opprette en ny, dette tar ikke lang tid 😄</p>
+        <p>Når din Feide 2-faktor er resatt vil du få muligheten til å opprette en ny, dette tar ikke lang tid 😄</p>
         <br>
     </div>
     <div class="res">
@@ -37,9 +37,9 @@
     <br>
     <div class="btn">
         {#if !isLoading}
-            <RemoveFeid2kator btnText={"Tilbakestill din feide 2 faktor"} userId={userId} bind:res={resFromRemoveFeid2Kator} bind:isProcessing={isLoading} bind:reloadFromRemove={reloadFromGot2Faktor} />
+            <RemoveFeid2kator btnText={"Tilbakestill din Feide 2 faktor"} userId={userId} bind:res={resFromRemoveFeid2Kator} bind:isProcessing={isLoading} bind:reloadFromRemove={reloadFromGot2Faktor} />
         {:else}
-            <RemoveFeid2kator btnText={"Tilbakestill din feide 2 faktor"} disabled={true}/>
+            <RemoveFeid2kator btnText={"Tilbakestill din Feide 2 faktor"} disabled={true}/>
         {/if}
     </div>
 </main>

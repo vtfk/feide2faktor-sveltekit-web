@@ -88,7 +88,7 @@
                         {#if res.data.status.mongoDB === true && res.data.status.got2Faktor === true && res.data.status.isFeideUser === true && res.data.status.partlyGot2Faktor === false}
                             <Got2Faktor userId={msalPid} bind:reloadFromGot2Faktor={checkUserStatus}/>
                         {:else if res.data.status.mongoDB === false && res.data.status.got2Faktor === true && res.data.status.isFeideUser === true && res.data.status.partlyGot2Faktor === false}
-                            <Falsly2Faktor userId={msalPid} />
+                            <Falsly2Faktor userId={msalPid} bind:reloadFromFalsly2Faktor={checkUserStatus}/>
                         {:else if (res.data.status.mongoDB === false || res.data.status.mongoDB === true) && res.data.status.got2Faktor === false && res.data.status.isFeideUser === true && res.data.status.partlyGot2Faktor === false}
                             <FeideUser userId={msalPid} bind:reloadFromFeideUser={checkUserStatus} />
                         {:else if res.data.status.mongoDB === false && res.data.status.got2Faktor === false && res.data.status.isFeideUser === false && res.data.status.partlyGot2Faktor === false}

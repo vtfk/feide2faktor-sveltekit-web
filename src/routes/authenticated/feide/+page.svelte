@@ -28,13 +28,13 @@
 <main>
     {#if !get(userOIDC)?.expires_at || get(userOIDC)?.expires_at + 3600 < Date.now() / 1000}
         <div class="header2kator">
-            <h1>Sett feid2kator</h1>
+            <h1>Sett Feide 2-faktor</h1>
         </div>
         <div class="contentWrapper">
             <div class="content2kator">
-            <p>Du må være logget inn med ID-porten for å sette feide 2-faktor.</p>
+            <p>Du må være logget inn med ID-porten for å sette Feide 2-faktor.</p>
             <br>
-            <p>NB! Du kan ikke logge inn på ID-Porten som en annen person enn den som er logget inn med Microsoft, gjør du dette vil du ikke ha mulighet til å sette feide 2-faktor.</p>
+            <p>NB! Du kan ikke logge inn på ID-Porten som en annen person enn den som er logget inn med Microsoft, gjør du dette vil du ikke ha mulighet til å sette Feide 2-faktor.</p>
             <br>
             <Button buttonText={"Login med ID-Porten"} onClick={ () => auth.login()}  removeSlots={true} />
             </div>
