@@ -63,24 +63,25 @@
             <ol>
                 <li>Legg til din Feide 2-faktor ved å skanne QR-Koden i din autentiserings applikasjon eller skriv inn hemmeligheten som står under QR-Koden i din autentiserings applikasjon.</li>
                 <li>Du vil nå få en ny oppføring blandt dine 2-faktor koder som heter "VTFK: Feide".</li>
-                <li>Skriv den 6-sifrede koden i feltet under som heter "Kode" og trykk på knappen "Valider" for å sjekke at din Feide 2-faktor har blitt opprettet riktig.</li>
+                <br>
+                <div class="wrapper">
+                    {#if !isProcessing}
+                        <div class="qrCode">
+                            <img alt="qrcode" src={`data:image/jpeg;base64,${qrCode.data}`} />
+                        </div>
+                        <div class="secret">
+                            <p>Hemmelighet: {secretCode.data}</p>
+                        </div>
+                    {:else}
+                        <div class="centerSpinner">
+                            <IconSpinner />
+                        </div>
+                    {/if}
+                </div>
+                <br>
+                <li><strong class="validate">Skriv den 6-sifrede koden i feltet under som heter "Kode" og trykk på knappen <p style="color: red; marging-left: 0.5rem; margin-right: 0.5rem"> "Valider" </p> for å sjekke at din Feide 2-faktor har blitt opprettet riktig.</strong></li>
             </ol>
         </div>
-        <br>
-        <div class="wrapper">
-            {#if !isProcessing}
-                <div class="qrCode">
-                    <img alt="qrcode" src={`data:image/jpeg;base64,${qrCode.data}`} />
-                </div>
-                <div class="secret">
-                    <p>Hemmelighet: {secretCode.data}</p>
-                </div>
-            {:else}
-                <div class="centerSpinner">
-                    <IconSpinner />
-                </div>
-            {/if}
-            </div>
         {#if !isProcessing && notVerified === true && secretInput?.length === 0}
             <br>
             <div class="wrongCode">
@@ -189,6 +190,14 @@
         padding: 0.5rem;
         font-size: large;
         font-weight: bolder;
+    }
+
+    .validate {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
     }
 
     @media(max-width: 885px) { 
